@@ -4,143 +4,667 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
         <script src="./script.js" defer></script>
-        <title>Nimali Furniture</title>
+        <title>Nimali Furniture - Elevate Your Space</title>
     </head>
     <body>
-        <!--the header and hero image-->
-        <section>
-            <h1>Nimali Furniture</h1>
-            <p>Elevate your space with elegance</p>
-            <p>Contact Us - 0768150618</p>
-        </section>
-
-        <!--about nimali furniture-->
-        <section>
-            <h2>About Nimali Furniture</h2>
-            <p></p>
-        </section>
-
-        <!--porductos-->
-        <section>
-            <div>
-                <fieldset>
-                    <div>
-                        <input
-                            type="radio"
-                            id="huey"
-                            name="drone"
-                            value="huey"
-                            checked
-                        />
-                        <label for="huey">Huey</label>
-                    </div>
-
-                    <div>
-                        <input
-                            type="radio"
-                            id="dewey"
-                            name="drone"
-                            value="dewey"
-                        />
-                        <label for="dewey">Dewey</label>
-                    </div>
-
-                    <div>
-                        <input
-                            type="radio"
-                            id="louie"
-                            name="drone"
-                            value="louie"
-                        />
-                        <label for="louie">Louie</label>
-                    </div>
-                </fieldset>
-            </div>
-            <div>
-                <img src="assets/foss.jpeg" alt="" />
-                <figcaption>This is the caption of the image</figcaption>
-            </div>
-        </section>
-
-        <!--services-->
-        <section>
-            <h2>Our services</h2>
-            <div>
-                <h3>Making good furniture</h3>
-                <p>We make good durable furniture</p>
-            </div>
-            <div>
-                <h3>Home delivery</h3>
-                <p>We do free home delivery</p>
-            </div>
-            <div>
-                <h3>Life long warrenty</h3>
-                <p>We do life long warrent for all our products.</p>
-            </div>
-        </section>
-
-        <!--gallerty-->
-        <section>
-            <div class="gallery-container">
-                <div class="gallery-item w-2 h-2">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item h-2">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item w-2">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-
-                <div class="gallery-item h-3">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item w-3 h-2">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item w-2">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-
-                <div class="gallery-item w-2 h-2">
-                    <img src="https://picsum.photos0" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item h-2">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-                <div class="gallery-item w-2">
-                    <img src="https://picsum.photos" alt="Gallery Image" />
-                </div>
-            </div>
-        </section>
-
-        <!--footer-->
-        <footer>
-            <div>
-                <h3>Location</h3>
-                <p>No. 605/A, Daluwakoktuwa Kochchikade</p>
-            </div>
-            <address>
-                <ul>
-                    <li>John Doe</li>
-                    <li>
-                        <a href="mailto:john@example.com">john@example.com</a>
-                    </li>
-                    <li>
-                        <a href="tel:+1234567890">+1 234 567 890</a>
-                    </li>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo">
+                    <img src="assets/nf-logo-bw.png" alt="" />
+                </a>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Toggle navigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
                 </ul>
-            </address>
+            </div>
+        </nav>
+
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-subtitle">Handcrafted in Sri Lanka</p>
+                <h1 class="hero-title">Nimali Furniture</h1>
+                <p class="hero-tagline">
+                    Elevate your space with timeless elegance and artisan
+                    craftsmanship
+                </p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary"
+                        >Explore Collection</a
+                    >
+                    <a href="tel:0768150618" class="btn btn-outline"
+                        >Call 076 815 0618</a
+                    >
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll to discover</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Story</span>
+                    <h2 class="section-title">
+                        Crafted with Passion,<br />Built to Last
+                    </h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            At Nimali Furniture, we believe that every home
+                            deserves furniture that tells a story. For over a
+                            decade, our master craftsmen have been creating
+                            bespoke pieces that blend traditional Sri Lankan
+                            artistry with contemporary design.
+                        </p>
+                        <p>
+                            Each piece is carefully handcrafted using
+                            sustainably sourced timber, ensuring not only beauty
+                            but durability that lasts generations. From the
+                            warmth of teak to the elegance of mahogany, we
+                            select only the finest materials.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Happy Homes</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <stat class="stat-label">Handcrafted</stat>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img
+                            src="assets/foss.jpeg"
+                            alt="Nimali Furniture craftsmanship"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Collection</span>
+                    <h2 class="section-title">Featured Products</h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" data-product="sofas">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1555041469-a586c7ea9c6d?w=600&h=400&fit=crop"
+                                alt="Living Room Sofa"
+                            />
+                            <div class="product-badge">Bestseller</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Living Room Sofas</h3>
+                            <p>Luxurious comfort meets elegant design</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product="dining">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&h=400&fit=crop"
+                                alt="Dining Table"
+                            />
+                        </div>
+                        <div class="product-info">
+                            <h3>Dining Sets</h3>
+                            <p>Gather around timeless craftsmanship</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product="bedroom">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1631049307264-da0ec9d70104?w=600&h=400&fit=crop"
+                                alt="Bedroom Set"
+                            />
+                            <div class="product-badge">New</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Bedroom Suites</h3>
+                            <p>Your personal retreat of comfort</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product="office">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=400&fit=crop"
+                                alt="Office Desk"
+                            />
+                        </div>
+                        <div class="product-info">
+                            <h3>Office Furniture</h3>
+                            <p>Productivity meets sophistication</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product="storage">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?w=600&h=400&fit=crop"
+                                alt="Bookshelf"
+                            />
+                        </div>
+                        <div class="product-info">
+                            <h3>Storage & Shelves</h3>
+                            <p>Beautiful organization for every room</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-product="bespoke">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop"
+                                alt="Custom Furniture"
+                            />
+                            <div class="product-badge">Custom</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Bespoke Creations</h3>
+                            <p>Designed exclusively for you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">What We Offer</span>
+                    <h2 class="section-title">Our Services</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                                />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </div>
+                        <h3>Custom Furniture Making</h3>
+                        <p>
+                            Handcrafted furniture tailored to your space and
+                            style, made with premium Sri Lankan timber and
+                            meticulous attention to detail.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect x="1" y="3" width="15" height="13" />
+                                <polygon
+                                    points="16 8 20 8 23 11 23 16 16 16 16 8"
+                                />
+                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                <circle cx="18.5" cy="18.5" r="2.5" />
+                            </svg>
+                        </div>
+                        <h3>Free Home Delivery</h3>
+                        <p>
+                            We deliver and assemble your furniture right in your
+                            home, anywhere in Sri Lanka, completely free of
+                            charge.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                />
+                            </svg>
+                        </div>
+                        <h3>Lifetime Warranty</h3>
+                        <p>
+                            Every piece comes with a lifetime warranty. We stand
+                            behind our craftsmanship because we build furniture
+                            that lasts generations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Work</span>
+                    <h2 class="section-title">Gallery</h2>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-item w-2 h-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item h-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1493663284031-b7e3a00cae00?w=400&h=600&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1538688524441-0e1af5c1126c?w=400&h=300&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item w-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=300&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item h-3">
+                        <img
+                            src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=900&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item w-3 h-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=1200&h=600&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item w-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1493663284031-b7e3a00cae00?w=800&h=300&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item w-2 h-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1631049307264-da0ec9d70104?w=800&h=600&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item h-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=600&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?w=400&h=300&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                    <div class="gallery-item w-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1555041469-a586c7ea9c6d?w=800&h=300&fit=crop"
+                            alt="Gallery Image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-label">Get In Touch</span>
+                        <h2 class="section-title">Visit Our Showroom</h2>
+                        <p class="contact-desc">
+                            Come see our furniture collection in person. Our
+                            team is ready to help you find the perfect piece for
+                            your home.
+                        </p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                        />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <strong>Address</strong>
+                                    <p>No. 605/A, Daluwakoktuwa, Kochchikade</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p>
+                                        <a href="tel:0768150618"
+                                            >076 815 0618</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <strong>Hours</strong>
+                                    <p>Mon-Sat: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <div class="map-placeholder">
+                            <svg
+                                width="48"
+                                height="48"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <p>Kochchikade, Sri Lanka</p>
+                            <a
+                                href="https://maps.google.com/?q=Kochchikade+Sri+Lanka"
+                                target="_blank"
+                                rel="noopener"
+                                class="btn btn-primary btn-sm"
+                                >Open in Maps</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>Nimali Furniture</h3>
+                        <p>
+                            Elevate your space with timeless elegance and
+                            artisan craftsmanship, handcrafted in Sri Lanka.
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>No. 605/A, Daluwakoktuwa</li>
+                            <li>Kochchikade, Sri Lanka</li>
+                            <li><a href="tel:0768150618">076 815 0618</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Nimali Furniture. All rights reserved.</p>
+                </div>
+            </div>
         </footer>
+
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-backdrop"></div>
+            <button
+                class="lightbox-close"
+                id="lightboxClose"
+                aria-label="Close lightbox"
+            >
+                <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <button
+                class="lightbox-nav lightbox-prev"
+                id="lightboxPrev"
+                aria-label="Previous image"
+            >
+                <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+            </button>
+            <button
+                class="lightbox-nav lightbox-next"
+                id="lightboxNext"
+                aria-label="Next image"
+            >
+                <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <polyline points="9 18 15 12 9 6" />
+                </svg>
+            </button>
+            <div class="lightbox-content">
+                <img src="" alt="Magnified view" id="lightboxImg" />
+            </div>
+        </div>
+
+        <div class="carousel" id="carousel">
+            <div class="carousel-backdrop"></div>
+            <div class="carousel-modal">
+                <button
+                    class="carousel-close"
+                    id="carouselClose"
+                    aria-label="Close carousel"
+                >
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+                <button
+                    class="carousel-nav carousel-prev"
+                    id="carouselPrev"
+                    aria-label="Previous image"
+                >
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+                <div class="carousel-body">
+                    <h3 class="carousel-title" id="carouselTitle"></h3>
+                    <div class="carousel-slider" id="carouselSlider">
+                        <img src="" alt="" id="carouselImg" />
+                    </div>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <p class="carousel-counter" id="carouselCounter"></p>
+                </div>
+                <button
+                    class="carousel-nav carousel-next"
+                    id="carouselNext"
+                    aria-label="Next image"
+                >
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <a
+            href="#hero"
+            class="back-to-top"
+            id="backToTop"
+            aria-label="Back to top"
+        >
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <polyline points="18 15 12 9 6 15" />
+            </svg>
+        </a>
     </body>
 </html>
