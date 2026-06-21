@@ -167,15 +167,25 @@ a {
 }
 
 .nav-logo {
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--color-white);
     transition: var(--transition);
 }
 
-.navbar.scrolled .nav-logo {
-    color: var(--color-primary);
+.nav-logo img {
+    width: 160px;
+    /*height: auto;*/
+    /*display: block;*/
+}
+
+.nav-logo-cl {
+    display: none;
+}
+
+.navbar.scrolled .nav-logo-bw {
+    display: none;
+}
+
+.navbar.scrolled .nav-logo-cl {
+    display: block;
 }
 
 .nav-links {

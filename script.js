@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".gallery-item").forEach((item) => {
     const img = item.querySelector("img");
-    galleryImages.push(img.src);
+    galleryImages.push(img.getAttribute("data-highq") || img.src);
     const idx = galleryImages.length - 1;
     item.style.cursor = "zoom-in";
     item.addEventListener("click", () => openLightbox(idx));
