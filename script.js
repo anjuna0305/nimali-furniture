@@ -55,10 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observerOptions = {
     root: null,
-    // rootMargin: "0px",
-    // threshold: 0.15,
-    rootMargin: "0px 0px -60px 0px", // trigger 60px before the bottom edge
-    threshold: 0,
+    rootMargin: "0px",
+    threshold: 0.15,
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -89,14 +87,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let galleryImages = [];
   let galleryIndex = 0;
 
-  document.querySelectorAll(".gallery-item img").forEach((img) => {
+  document.querySelectorAll(".gallery-item").forEach((item) => {
+    const img = item.querySelector("img");
     galleryImages.push(img.src);
     const idx = galleryImages.length - 1;
-    img.style.cursor = "zoom-in";
-    img.addEventListener("click", () => openLightbox(idx));
+    item.style.cursor = "zoom-in";
+    item.addEventListener("click", () => openLightbox(idx));
   });
 
   function openLightbox(index) {
+    console.log("lightbox open called");
     galleryIndex = index;
     lightboxImg.src = galleryImages[galleryIndex];
     lightbox.classList.add("active");

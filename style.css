@@ -245,6 +245,10 @@ a {
     background: var(--color-primary);
 }
 
+.nav-toggle.active span {
+    background: var(--color-primary);
+}
+
 /* ===================== HERO ===================== */
 .hero {
     position: relative;
@@ -1216,10 +1220,18 @@ a {
         background: var(--color-bg-alt) !important;
     }
 
-    .nav-cta {
+    .nav-links .nav-cta {
         margin-top: 16px;
         text-align: center;
         width: 100%;
+        color: var(--color-white) !important;
+        background: var(--color-accent) !important;
+        border-radius: 50px !important;
+    }
+
+    .nav-links .nav-cta:hover {
+        background: var(--color-accent) !important;
+        color: var(--color-white) !important;
     }
 
     .about-grid,
@@ -1276,8 +1288,17 @@ a {
     }
 
     .about-stats {
-        flex-direction: column;
-        gap: 16px;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
     }
 
     .gallery-container {
@@ -1294,11 +1315,4 @@ a {
     .contact-map {
         min-height: 250px;
     }
-}
-
-.navbar,
-.back-to-top,
-.product-card,
-.gallery-item img {
-    will-change: transform;
 }
