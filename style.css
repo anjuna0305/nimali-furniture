@@ -39,7 +39,7 @@ body {
     color: var(--color-text);
     background-color: var(--color-bg);
     line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
+    /*-webkit-font-smoothing: antialiased;*/
     -moz-osx-font-smoothing: grayscale;
 }
 
@@ -1294,4 +1294,11 @@ a {
     .contact-map {
         min-height: 250px;
     }
+}
+
+.navbar,
+.back-to-top,
+.product-card,
+.gallery-item img {
+    will-change: transform;
 }

@@ -16,26 +16,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
+  // window.addEventListener(
+  //   "scroll",
+  //   () => {
+  //     const scrollY = window.scrollY;
 
-    if (scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
+  //     if (scrollY > 50) {
+  //       navbar.classList.add("scrolled");
+  //     } else {
+  //       navbar.classList.remove("scrolled");
+  //     }
 
-    if (scrollY > 400) {
-      backToTop.classList.add("visible");
-    } else {
-      backToTop.classList.remove("visible");
-    }
-  });
+  //     if (scrollY > 400) {
+  //       backToTop.classList.add("visible");
+  //     } else {
+  //       backToTop.classList.remove("visible");
+  //     }
+  //   },
+  //   { passive: true },
+  // );
+
+  let ticking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          navbar.classList.toggle("scrolled", scrollY > 50);
+          backToTop.classList.toggle("visible", scrollY > 400);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    },
+    { passive: true },
+  );
 
   const observerOptions = {
     root: null,
-    rootMargin: "0px",
-    threshold: 0.15,
+    // rootMargin: "0px",
+    // threshold: 0.15,
+    rootMargin: "0px 0px -60px 0px", // trigger 60px before the bottom edge
+    threshold: 0,
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -56,16 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.classList.add("fade-in");
       observer.observe(el);
     });
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
 
   // ==================== LIGHTBOX ====================
   const lightbox = document.getElementById("lightbox");
@@ -100,8 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function navigateLightbox(direction) {
     galleryIndex =
-      (galleryIndex + direction + galleryImages.length) %
-      galleryImages.length;
+      (galleryIndex + direction + galleryImages.length) % galleryImages.length;
     lightboxImg.src = galleryImages[galleryIndex];
   }
 
