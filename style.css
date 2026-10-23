@@ -348,6 +348,14 @@ a {
     line-height: 1.6;
 }
 
+.hero-tagline-sm {
+    font-size: clamp(0.8rem, 2vw, 0.8rem);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+    margin: 80px auto 0px;
+    line-height: 1.6;
+}
+
 .hero-actions {
     display: flex;
     gap: 16px;
