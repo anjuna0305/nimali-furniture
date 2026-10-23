@@ -70,8 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document
     .querySelectorAll(
-      ".about, .products, .services, .gallery, .contact, " +
-        ".product-card, .service-card, .about-grid, .about-stats, .contact-grid",
+      ".product-card, .service-card, .about-grid, .contact-grid",
     )
     .forEach((el) => {
       el.classList.add("fade-in");

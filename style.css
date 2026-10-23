@@ -146,14 +146,13 @@ a {
     right: 0;
     z-index: 1000;
     padding: 20px 0;
-    transition: var(--transition);
+    transition:
+        background-color var(--transition),
+        box-shadow var(--transition);
 }
 
 .navbar.scrolled {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 12px 0;
     box-shadow: var(--shadow-md);
 }
 
@@ -405,11 +404,11 @@ a {
 
 @keyframes scrollDown {
     0% {
-        top: 8px;
+        transform: translate(-50%, 0);
         opacity: 1;
     }
     100% {
-        top: 24px;
+        transform: translate(-50%, 16px);
         opacity: 0;
     }
 }
@@ -587,8 +586,6 @@ a {
 
 .service-card {
     background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
     padding: 40px 32px;
